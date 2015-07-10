@@ -22,5 +22,6 @@ app.use(router.routes()).use(router.allowedMethods());
 routes(router);
 
 app = module.exports = http.createServer(app.callback());
+console.log(process.env.PORT)
 app.listen(process.env.PORT || 3001);
 console.log('listening on port');
