@@ -10,7 +10,7 @@ exports.handle = function* () {
   var content = this.request.body;
   if (content.trigger_word === 'test') {
     this.body = {
-      text: 'hello world'
+      text: 'http://i.imgur.com/JQ8GA1p.jpg'
     };
     this.status = 200;
   }
