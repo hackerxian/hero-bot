@@ -4,6 +4,7 @@
 
 var middlewares = require('koa-middlewares');
 var routes = require('./routes');
+var config = require('./config');
 var koa = require('koa');
 var app = koa();
 var http = require('http');
@@ -22,6 +23,5 @@ app.use(router.routes()).use(router.allowedMethods());
 routes(router);
 
 app = module.exports = http.createServer(app.callback());
-console.log(process.env.PORT)
-app.listen(process.env.PORT || 3001);
-console.log('listening on port');
+app.listen(config.port);
+console.log('listening on port ' + config.port);
