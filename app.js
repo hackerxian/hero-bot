@@ -23,5 +23,5 @@ app.use(router.routes()).use(router.allowedMethods());
 routes(router);
 
 app = module.exports = http.createServer(app.callback());
-app.listen(5000);
-console.log('listening on port 5000');
+app.listen(process.env.PORT || 3001);
+console.log('listening on port');

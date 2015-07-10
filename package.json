@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/dickeyxian/hero-bot#readme",
   "engines": {
-    "node": "0.11.x"
+    "node": "0.12.x"
   }
 }
