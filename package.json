@@ -1,0 +1,29 @@
+{
+  "name": "hero-bot",
+  "version": "1.0.0",
+  "description": "A good bot",
+  "main": "app.js",
+  "dependencies": {
+    "koa": "~0.21.0",
+    "koa-middlewares": "~4.0.0"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dickeyxian/hero-bot.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "xianda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dickeyxian/hero-bot/issues"
+  },
+  "homepage": "https://github.com/dickeyxian/hero-bot#readme",
+  "engines": {
+    "node": "0.12.x"
+  }
+}
