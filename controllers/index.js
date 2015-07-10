@@ -3,6 +3,7 @@
  */
 exports.home = function* () {
   this.body = 'hello world';
+  this.status = 200;
 };
 
 exports.handle = function* () {
