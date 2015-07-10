@@ -17,7 +17,7 @@ exports.handle = function* () {
           "title": "Network traffic (kb/s)",
           "title_link": "https://datadog.com/path/to/event",
           "text": "How does this look? @slack-ops - Sent by Julie Dodd",
-          "image_url": "https://datadoghq.com/snapshot/path/to/snapshot.png",
+          "image_url": "http://i.imgur.com/JQ8GA1p.jpg",
           "color": "#764FA5"
         }
       ]
