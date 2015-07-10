@@ -8,5 +8,10 @@ exports.home = function* () {
 
 exports.handle = function* () {
   var content = this.request.body;
-  console.log(content)
+  if (content.trigger_word === 'test') {
+    this.body = {
+      text: 'hello world'
+    };
+    this.status = 200;
+  }
 };

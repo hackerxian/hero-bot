@@ -19,7 +19,6 @@ var router = middlewares.router(app);
 
 app.use(router.routes()).use(router.allowedMethods());
 
-
 routes(router);
 
 app = module.exports = http.createServer(app.callback());
