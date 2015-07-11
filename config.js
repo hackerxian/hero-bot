@@ -17,7 +17,12 @@ var config = {
     SECRET_KEY: 'c8tTHMsC1N5DuVt4TfvLyWSA7uSYCsJZFtZS_tUF',
     bucketname: 'herobot',
     bucketDomain: '7xkaof.com1.z0.glb.clouddn.com'
+  },
+  simi: {
+    url: 'http://sandbox.api.simsimi.com/request.p',
+    SIMSIMI_KEY: '50c086cb-5ea3-4190-bdd6-69787a540ec4'
   }
+
 };
 
 module.exports = config;
