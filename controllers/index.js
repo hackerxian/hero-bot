@@ -13,8 +13,9 @@ exports.home = function* () {
 exports.handle = function* () {
   var content = this.request.body;
   console.log(content)
-  var text = content.trigger_word;
-  if (text === 'test') {
+  var trigger_word = content.trigger_word;
+  var text = content.text;
+  if (trigger_word === 'test') {
     yield utils.getImg('http://finance.sina.com.cn/stock/','test2', '#wmt_contents', 'iphone 5s');
     this.body = {
       text: 'http://i.imgur.com/JQ8GA1p.jpg',
@@ -29,7 +30,8 @@ exports.handle = function* () {
         }
       ]
     };
-  } else {
+  }
+  if (text) {
     var reply = yield simi.chat(text);
     console.log(reply)
     this.body = {
