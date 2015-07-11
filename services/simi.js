@@ -8,9 +8,11 @@ var simiUrl = config.simi.url + '?key=%s&lc=ch&ft=1.0&text=%s';
 
 exports.chat = function* (text) {
   var url = util.format(simiUrl, simiKey, text);
+  console.log(url)
   var result = yield urllib.request(url, {
     dataType: 'json'
   });
+  console.log(result)
   return result.data.response;
 };
 
