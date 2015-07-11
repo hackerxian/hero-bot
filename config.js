@@ -20,7 +20,8 @@ var config = {
   },
   simi: {
     url: 'http://sandbox.api.simsimi.com/request.p',
-    SIMSIMI_KEY: '50c086cb-5ea3-4190-bdd6-69787a540ec4'
+    //SIMSIMI_KEY: '50c086cb-5ea3-4190-bdd6-69787a540ec4'
+    SIMSIMI_KEY: '3065f890-8ec0-4f3a-aa21-031c8cce7967'
   }
 
 };
