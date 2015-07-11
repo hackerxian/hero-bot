@@ -16,6 +16,7 @@ exports.chat = function* (text) {
       text: text
     }
   });
+  console.log(result.data)
   return result.data.response;
 };
 
