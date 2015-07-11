@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "co": "^4.6.0",
+    "co-request": "~0.2.1",
     "koa": "~0.21.0",
     "koa-middlewares": "~4.0.0",
     "later": "^1.1.6",
