@@ -35,7 +35,7 @@ exports.handle = function* () {
     var reply = yield simi.chat(text) || 呵呵;
     console.log(reply)
     this.body = {
-      text: '!' + reply
+      //text: '!' + reply
     };
     this.status = 200;
   }
