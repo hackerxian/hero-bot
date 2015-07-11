@@ -12,6 +12,7 @@ exports.home = function* () {
 
 exports.handle = function* () {
   var content = this.request.body;
+  console.log(content)
   var text = content.trigger_word;
   if (text === 'test') {
     yield utils.getImg('http://finance.sina.com.cn/stock/','test2', '#wmt_contents', 'iphone 5s');
@@ -30,6 +31,7 @@ exports.handle = function* () {
     };
   } else {
     var reply = yield simi.chat(text);
+    console.log(reply)
     this.body = {
       text: reply
     }
