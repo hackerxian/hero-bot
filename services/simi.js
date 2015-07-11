@@ -15,8 +15,8 @@ exports.chat = function* (text) {
 };
 
 //exports.chat('为什么');
-co(function* (){
-  yield exports.chat('这是为什么');
-}).catch(function(err) {
-  console.error(err);
-});
+//co(function* (){
+//  yield exports.chat('这是为什么');
+//}).catch(function(err) {
+//  console.error(err);
+//});
