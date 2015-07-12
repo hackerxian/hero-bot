@@ -12,7 +12,7 @@ console.log(later.hour.val(new Date()));
 //var sched = later.parse.recur().on(15).hour();
 
 //var sched = later.parse.recur().every(2).second();
-var sched = later.parse.recur().on('15:45:00').time();
+var sched = later.parse.recur().on('7:50:00').time();
 
 var task;
 exports.sendSlack = function (sched, action) {
