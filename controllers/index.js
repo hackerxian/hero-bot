@@ -38,15 +38,8 @@ exports.handle = function* () {
   }
   if (text) {
     var reply = (yield simi.chat(text)) || '呵呵';
-    var text = '!' + reply;
     return this.body = {
-      text: '',
-      "attachments": [
-        {
-          text: text,
-          "color": "good"
-        }
-      ]
+      text: '!' + reply
     };
   }
 };
