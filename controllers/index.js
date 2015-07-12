@@ -42,7 +42,11 @@ exports.handle = function* () {
     return this.body = {
       "attachments": [
         {
-          "text": "!" + reply,
+          "fallback": "Network traffic (kb/s): How does this look? @slack-ops - Sent by Julie Dodd - https://datadog.com/path/to/event",
+          "title": "Network traffic (kb/s)",
+          "title_link": "https://datadog.com/path/to/event",
+          "text": "How does this look? @slack-ops - Sent by Julie Dodd",
+          "image_url": "http://i.imgur.com/JQ8GA1p.jpg",
           "color": "good"
         }
       ]
