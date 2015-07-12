@@ -42,7 +42,8 @@ exports.handle = function* () {
     return this.body = {
       "attachments": [
         {
-          "text": '!' + reply
+          "text": "!" + reply,
+          "color": "good"
         }
       ]
     };
