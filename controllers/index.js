@@ -38,16 +38,11 @@ exports.handle = function* () {
   }
   if (text) {
     var reply = (yield simi.chat(text)) || '呵呵';
-    console.log(reply)
+    var text = '!' + reply;
     return this.body = {
-      text: '!test',
+      text: text,
       "attachments": [
         {
-          "fallback": "Network traffic (kb/s): How does this look? @slack-ops - Sent by Julie Dodd - https://datadog.com/path/to/event",
-          "title": "Network traffic (kb/s)",
-          "title_link": "https://datadog.com/path/to/event",
-          "text": "!How does this look? @slack-ops - Sent by Julie Dodd",
-          "image_url": "http://i.imgur.com/JQ8GA1p.jpg",
           "color": "good"
         }
       ]
