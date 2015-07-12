@@ -43,6 +43,7 @@ exports.handle = function* () {
       text: text,
       "attachments": [
         {
+          text: text,
           "color": "good"
         }
       ]
