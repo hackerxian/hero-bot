@@ -1,6 +1,5 @@
 var urllib = require('urllib');
 var config = require('../config');
-var util = require('util');
 var co = require('co');
 
 var simiKey = config.simi.SIMSIMI_KEY;
@@ -11,13 +10,10 @@ exports.chat = function* (text) {
     dataType: 'json',
     data: {
       key: simiKey,
-      lc: 'ch',
-      ft: '1.0',
-      text: text
+      info: text
     }
   });
-  console.log(result.data)
-  return result.data.response;
+  return result.data.text;
 };
 
 //co(function* (){

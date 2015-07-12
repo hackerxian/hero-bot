@@ -19,9 +19,10 @@ var config = {
     bucketDomain: '7xkaof.com1.z0.glb.clouddn.com'
   },
   simi: {
-    url: 'http://sandbox.api.simsimi.com/request.p',
+    url: 'http://www.tuling123.com/openapi/api',
+    SIMSIMI_KEY: '030e7943b80ca725de4c3982899320b4'
     //SIMSIMI_KEY: '50c086cb-5ea3-4190-bdd6-69787a540ec4'
-    SIMSIMI_KEY: '3065f890-8ec0-4f3a-aa21-031c8cce7967'
+    //SIMSIMI_KEY: '3065f890-8ec0-4f3a-aa21-031c8cce7967'
   },
   slack: {
     randomInComingUrl: 'https://hooks.slack.com/services/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'

@@ -38,7 +38,6 @@ exports.handle = function* () {
   }
   if (text) {
     var reply = (yield simi.chat(text)) || '呵呵';
-    console.log(reply)
     return this.body = {
       text: '!' + reply
     };
