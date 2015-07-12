@@ -9,12 +9,18 @@ console.log("Now:"+new Date());
 later.date.localTime();
 //var sched = later.parse.recur().on(15).hour();
 
-var sched = later.parse.recur().on('15:17:00').time();
+//var sched = later.parse.recur().every(2).second();
+var sched = later.parse.recur().on('15:30:00').time();
 
 var task;
-exports.sendSlack = function* (sched, action) {
-  task = later.setInterval(function() {
-    yield action();
+exports.sendSlack = function (sched, action) {
+  task = later.setInterval(function () {
+    console.log('enter')
+    co(function* (){
+      yield action();
+    }).catch(function(err) {
+      console.error(err);
+    });
   }, sched);
 };
 
@@ -25,16 +31,18 @@ function* sendMessage() {
       'Content-Type': 'application/json'
     },
     data: {
-      "text": "A very important thing has occurred! <https://alert-system.com/alerts/1234|Click here> for details!"
+      "text": "hello world"
     }
   });
   console.log(result.data.toString())
 }
 
-co(function* (){
-  yield exports.sendSlack(sched, sendMessage);
-}).catch(function(err) {
-  console.error(err);
-});
+exports.sendSlack(sched, sendMessage);
+
+//co(function* (){
+//  yield exports.sendSlack(sched, sendMessage);
+//}).catch(function(err) {
+//  console.error(err);
+//});
 
 
