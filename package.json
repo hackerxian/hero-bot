@@ -1,7 +1,7 @@
 {
   "name": "hero-bot",
   "version": "1.0.0",
-  "description": "A good bot",
+  "description": "A good bot.",
   "main": "app.js",
   "dependencies": {
     "co": "^4.6.0",
