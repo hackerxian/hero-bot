@@ -8,6 +8,7 @@ var config = require('./config');
 var koa = require('koa');
 var app = koa();
 var http = require('http');
+var path= require('path');
 
 /**
  * ignore favicon
@@ -15,6 +16,10 @@ var http = require('http');
 app.use(middlewares.favicon());
 
 app.use(middlewares.bodyParser());
+
+app.use(middlewares.staticCache(path.join(__dirname, 'assets'), {
+  maxAge: 60 * 60 * 24 * 30
+}));
 
 var router = middlewares.router(app);
 

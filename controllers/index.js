@@ -4,11 +4,12 @@
 var utils = require('../utils');
 var simi = require('../services/simi');
 var task = require('../services/later');
+var fs = require('fs');
+var path = require('path');
 
 
 exports.home = function* () {
-  this.body = 'hello world';
-  this.status = 200;
+  return this.body = fs.readFileSync(path.join(__dirname, '../views/index.html'), 'utf8');
 };
 
 
