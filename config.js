@@ -26,6 +26,9 @@ var config = {
   },
   slack: {
     randomInComingUrl: 'https://hooks.slack.com/services/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'
+  },
+  wechat: {
+    url: 'http://sc.ftqq.com/SCU296T3b364199bbfdc5dbdd2d14804a720f3355f196faa1830.send'
   }
 
 };
