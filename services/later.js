@@ -12,7 +12,7 @@ console.log(later.hour.val(new Date()));
 //var sched = later.parse.recur().on(15).hour();
 
 //var sched = later.parse.recur().every(10).second();
-var sched = later.parse.recur().on('6:10:00').time();
+var sched = later.parse.recur().on('12:10:00').time();
 
 var occurrences = later.schedule(sched).next(10);
 console.log(occurrences)
