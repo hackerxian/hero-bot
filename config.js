@@ -11,7 +11,7 @@ var path = require('path');
 var config = {
   version: version,
   debug: process.env.NODE_ENV !== 'production',
-  port: process.env.PORT || 7001,
+  port: process.env.PORT || 7002,
   qiniu: {
     ACCESS_KEY: 'pkKsrXSbgRnY9zUWKcJgMBngCusbXzONu4Nzithb',
     SECRET_KEY: 'c8tTHMsC1N5DuVt4TfvLyWSA7uSYCsJZFtZS_tUF',

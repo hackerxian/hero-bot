@@ -3,7 +3,7 @@
  */
 var utils = require('../utils');
 var simi = require('../services/simi');
-var task = require('../services/later');
+var task = require('../services/weibo');
 var fs = require('fs');
 var path = require('path');
 
