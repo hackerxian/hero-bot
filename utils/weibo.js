@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.getGitDaily = function* () {
-  var Cookie = 'SUHB=0Ryr9-FWsUMJP2; _T_WM=9999d45b15f34759ddbf410f183a9f6d; gsid_CTandWM=4uJa57b01vfgNxMxTcf5no2xv89; H5_INDEX_TITLE=; SUB=_2A257KP4GDeTxGeNJ6VsX8ynJyzmIHXVY0oJOrDV6PUJbrdANLXHukW2LVdDUCw8IUSpLWLuyLtRBDvZaMg..';
+  var Cookie = 'SUHB=0Ryr9-FWsUMJP2; _T_WM=9999d45b15f34759ddbf410f183a9f6d; SUB=_2A257MPX8DeTxGeNJ6VsX8ynJyzmIHXVY2pu0rDV6PUJbrdANLVbjkW2YdM5mLj4JVbZdnGJ-ayw9GDRZBw..; gsid_CTandWM=4urrd0fb1tseAAFLGnxU8o2xv89';
 
   var url = 'http://weibo.cn/GitHubDaily';
   var content = yield getContent(url, Cookie);
@@ -14,6 +14,12 @@ exports.getGitDaily = function* () {
   var file = path.join(dir, 'log/weibo.txt');
   var $ = cheerio.load(content);
   var title = $('.c .ctt').first().html();
+  if (!title) {
+    return {
+      text: 'Cookie失效',
+      desp: '请更新Cookie'
+    };
+  }
   var titleStr = title.substring(0, 10);
   var fileContent = fs.readFileSync(file, 'utf-8');
   if (titleStr !== fileContent) {
