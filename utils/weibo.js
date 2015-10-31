@@ -10,7 +10,7 @@ exports.getGitDaily = function* () {
 
   var url = 'http://weibo.cn/GitHubDaily';
   var content = yield getContent(url, Cookie);
-  var dir = path.dirname(__dirname)
+  var dir = path.dirname(__dirname);
   var file = path.join(dir, 'log/weibo.txt');
   var $ = cheerio.load(content);
   var title = $('.c .ctt').first().html();
