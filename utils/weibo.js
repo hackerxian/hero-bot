@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.getGitDaily = function* () {
-  var Cookie = 'SUHB=0Ryr9-FWsUMJP2; _T_WM=9999d45b15f34759ddbf410f183a9f6d; SUB=_2A257MPX8DeTxGeNJ6VsX8ynJyzmIHXVY2pu0rDV6PUJbrdANLVbjkW2YdM5mLj4JVbZdnGJ-ayw9GDRZBw..; gsid_CTandWM=4urrd0fb1tseAAFLGnxU8o2xv89';
+  var Cookie = 'SUHB=0Ryr9-FWsUMJP2; _T_WM=9999d45b15f34759ddbf410f183a9f6d; SUB=_2A257PP_jDeTxGeNJ6VsX8ynJyzmIHXVY3oGrrDV6PUJbrdANLUP5kW2Mffg8tqNfVdo6b720BA33wH-NPA..; gsid_CTandWM=4urrd0fb1tseAAFLGnxU8o2xv89';
 
   var url = 'http://weibo.cn/GitHubDaily';
   var content = yield getContent(url, Cookie);
