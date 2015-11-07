@@ -22,7 +22,6 @@ console.log(occurrences)
 var count = 1;
 exports.sendWeChat = function (sched, action) {
   later.setInterval(function () {
-    console.log('start check....%d', count++);
     co(function* (){
       yield action();
     }).catch(function(err) {

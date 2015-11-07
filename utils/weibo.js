@@ -15,6 +15,7 @@ exports.getGitDaily = function* () {
   var $ = cheerio.load(content);
   var title = $('.c .ctt').first().html();
   if (!title) {
+    console.log($('.c .ctt').first())
     return {
       text: 'Cookie失效',
       desp: '请更新Cookie'
