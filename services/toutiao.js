@@ -19,7 +19,8 @@ function onerror(err) {
   };
   co(function* (){
     yield utils.sendMessage(content)
-  })
+  });
+  console.error(err);
 }
 
 setInterval(function(){
