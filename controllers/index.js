@@ -3,10 +3,11 @@
  */
 var utils = require('../utils');
 var simi = require('../services/simi');
-var task = require('../services/weibo');
 var fs = require('fs');
 var path = require('path');
 
+//require('../services/weibo');
+require('../services/toutiao');
 
 exports.home = function* () {
   return this.body = fs.readFileSync(path.join(__dirname, '../views/index.html'), 'utf8');
